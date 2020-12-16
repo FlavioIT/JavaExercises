@@ -6,8 +6,9 @@ public class App {
         BinaryTree bt = new BinaryTree();
         int option;
         
-        System.out.println("Pressione o número juntamente com a tecla enter para acessar a opção desejada");
+        System.out.println("Pressione o número juntamente com a tecla enter para acessar a opção desejada:");
         System.out.println("1-Criar árvore binária");
+        System.out.println("2-Inserir valores");
 
         do{
             option = scn.nextInt();
@@ -15,7 +16,7 @@ public class App {
                 case 1:
                     bt.deleteTree(bt.root);
                     System.out.println("Árvore binária criada!\nDados antigos foram sobrepostos.");
-                    break;  
+                    break;
                 case 2:
                     System.out.println("Quantos valores deseja inserir à árvore?");
                     int numValores = scn.nextInt();
