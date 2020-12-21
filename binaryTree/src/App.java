@@ -10,6 +10,7 @@ public class App {
         Scanner scn = new Scanner(System.in);
         BinaryTree bt = new BinaryTree();
         int option;
+        int option2;
         boolean arvore = false;
 
         do {
@@ -69,7 +70,24 @@ public class App {
                     break;
                 case 5:
                     if (arvore == true){
-
+                        do{
+                            System.out.println("\nEscolha a opção de verificação desejada:");
+                            System.out.println("1-Pré-Ordem:\n2-Ordem intercalada:\n3-Pós-Ordem:\n0-Voltar");
+                            option2 = scn.nextInt();
+                            switch (option2){
+                                case 1:
+                                    bt.traversePreOrder(bt.root);
+                                    break;
+                                case 2:
+                                    bt.traverseInOrder(bt.root);
+                                    break;
+                                case 3:
+                                    bt.traversePostOrder(bt.root);
+                                    break;
+                                default:
+                                    break;
+                            } 
+                        }while (option2 != 0);
                     }else{
                         treeErrorMsg();
                     }
