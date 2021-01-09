@@ -59,7 +59,7 @@ public class BinaryTree {
     public void traverseInOrder(Node node) {
         if (node != null) {
             traverseInOrder(node.left);
-            System.out.print(" \n" + node.value);
+            System.out.print(" " + node.value);
             traverseInOrder(node.right);
         }
     }
@@ -76,7 +76,7 @@ public class BinaryTree {
         if (node != null) {
             traversePostOrder(node.left);
             traversePostOrder(node.right);
-            System.out.print(" \n" + node.value);
+            System.out.print(" " + node.value);
         }
     }
 
